@@ -14,7 +14,7 @@ print("ApolloCodegen will download and use schema path of \(schemaPath.absoluteS
 let appPath = cwd // ApolloCodegen
     .deletingLastPathComponent() // apollo
     .deletingLastPathComponent() // scripts
-    .deletingLastPathComponent() // Posusume
+    .deletingLastPathComponent() // HoshiHoshii
 print("Defined application path: \(appPath)")
 
 do {
