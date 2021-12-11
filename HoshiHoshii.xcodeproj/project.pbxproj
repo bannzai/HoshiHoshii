@@ -3,22 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2003A33527654F8700371CAE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33427654F8700371CAE /* UserProfile.swift */; };
+		2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33627654F9800371CAE /* RepositoryCard.swift */; };
+		2003A33927654FA800371CAE /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33827654FA800371CAE /* StarButton.swift */; };
+		2003A33B27654FB900371CAE /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33A27654FB900371CAE /* RepositoryList.swift */; };
+		2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33C2765500B00371CAE /* ApolloClient.swift */; };
 		205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */; };
 		205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9F275CE02B003E5D91 /* ContentView.swift */; };
 		205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AEEA1275CE02B003E5D91 /* Assets.xcassets */; };
 		205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AEEA4275CE02B003E5D91 /* Preview Assets.xcassets */; };
+		20914D2C27655708000CC98B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2B27655708000CC98B /* Apollo */; };
+		20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2D27655708000CC98B /* ApolloSQLite */; };
+		20914D33276563A9000CC98B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20914D32276563A9000CC98B /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2003A33427654F8700371CAE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2003A33627654F9800371CAE /* RepositoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCard.swift; sourceTree = "<group>"; };
+		2003A33827654FA800371CAE /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
+		2003A33A27654FB900371CAE /* RepositoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
+		2003A33C2765500B00371CAE /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
 		205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoshiHoshii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiHoshiiApp.swift; sourceTree = "<group>"; };
 		205AEE9F275CE02B003E5D91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		205AEEA1275CE02B003E5D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205AEEA4275CE02B003E5D91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20914D2F2765587C000CC98B /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		20914D32276563A9000CC98B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +68,17 @@
 		205AEE9C275CE02B003E5D91 /* HoshiHoshii */ = {
 			isa = PBXGroup;
 			children = (
+				20914D32276563A9000CC98B /* Info.plist */,
 				205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */,
 				205AEE9F275CE02B003E5D91 /* ContentView.swift */,
+				2003A33A27654FB900371CAE /* RepositoryList.swift */,
+				2003A33827654FA800371CAE /* StarButton.swift */,
+				2003A33627654F9800371CAE /* RepositoryCard.swift */,
+				2003A33427654F8700371CAE /* UserProfile.swift */,
 				205AEEA1275CE02B003E5D91 /* Assets.xcassets */,
 				205AEEA3275CE02B003E5D91 /* Preview Content */,
+				2003A33C2765500B00371CAE /* ApolloClient.swift */,
+				20914D2F2765587C000CC98B /* Secret.swift */,
 			);
 			path = HoshiHoshii;
 			sourceTree = "<group>";
@@ -109,7 +131,7 @@
 				};
 			};
 			buildConfigurationList = 205AEE95275CE02B003E5D91 /* Build configuration list for PBXProject "HoshiHoshii" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -136,6 +158,7 @@
 			files = (
 				205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */,
 				205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */,
+				20914D33276563A9000CC98B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2003A33927654FA800371CAE /* StarButton.swift in Sources */,
 				205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */,
+				2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */,
+				2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */,
+				2003A33B27654FB900371CAE /* RepositoryList.swift in Sources */,
 				205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */,
+				2003A33527654F8700371CAE /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +309,7 @@
 				DEVELOPMENT_TEAM = TQPN82UBBY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoshiHoshii/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,7 +324,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,6 +339,7 @@
 				DEVELOPMENT_TEAM = TQPN82UBBY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoshiHoshii/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,7 +354,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
