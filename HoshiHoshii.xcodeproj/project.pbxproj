@@ -19,6 +19,7 @@
 		20914D2C27655708000CC98B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2B27655708000CC98B /* Apollo */; };
 		20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2D27655708000CC98B /* ApolloSQLite */; };
 		20914D33276563A9000CC98B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20914D32276563A9000CC98B /* Info.plist */; };
+		20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		205AEEA4275CE02B003E5D91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20914D2F2765587C000CC98B /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		20914D32276563A9000CC98B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloInterceptorProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				205AEEA1275CE02B003E5D91 /* Assets.xcassets */,
 				205AEEA3275CE02B003E5D91 /* Preview Content */,
 				2003A33C2765500B00371CAE /* ApolloClient.swift */,
+				20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */,
 				20914D2F2765587C000CC98B /* Secret.swift */,
 			);
 			path = HoshiHoshii;
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */,
 				2003A33927654FA800371CAE /* StarButton.swift in Sources */,
 				205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */,
 				2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */,
