@@ -26,6 +26,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20914D2C27655708000CC98B /* Apollo in Frameworks */,
+				20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,10 @@
 			dependencies = (
 			);
 			name = HoshiHoshii;
+			packageProductDependencies = (
+				20914D2B27655708000CC98B /* Apollo */,
+				20914D2D27655708000CC98B /* ApolloSQLite */,
+			);
 			productName = HoshiHoshii;
 			productReference = 205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 205AEE91275CE02B003E5D91;
+			packageReferences = (
+				20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 205AEE9B275CE02B003E5D91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +350,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.49.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20914D2B27655708000CC98B /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		20914D2D27655708000CC98B /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 205AEE92275CE02B003E5D91 /* Project object */;
 }
