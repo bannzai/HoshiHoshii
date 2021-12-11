@@ -20,6 +20,9 @@
 		20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2D27655708000CC98B /* ApolloSQLite */; };
 		20914D33276563A9000CC98B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20914D32276563A9000CC98B /* Info.plist */; };
 		20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */; };
+		20914D3A27656BB5000CC98B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 20914D3727656BB5000CC98B /* .gitkeep */; };
+		20914D3B27656BB5000CC98B /* Types.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3827656BB5000CC98B /* Types.graphql.swift */; };
+		20914D3C27656BB5000CC98B /* bannzai.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3927656BB5000CC98B /* bannzai.graphql.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		20914D2F2765587C000CC98B /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		20914D32276563A9000CC98B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloInterceptorProvider.swift; sourceTree = "<group>"; };
+		20914D3727656BB5000CC98B /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		20914D3827656BB5000CC98B /* Types.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.graphql.swift; sourceTree = "<group>"; };
+		20914D3927656BB5000CC98B /* bannzai.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bannzai.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		205AEE9C275CE02B003E5D91 /* HoshiHoshii */ = {
 			isa = PBXGroup;
 			children = (
+				20914D3627656BB5000CC98B /* GraphQL */,
 				20914D32276563A9000CC98B /* Info.plist */,
 				205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */,
 				205AEE9F275CE02B003E5D91 /* ContentView.swift */,
@@ -93,6 +100,16 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		20914D3627656BB5000CC98B /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				20914D3727656BB5000CC98B /* .gitkeep */,
+				20914D3827656BB5000CC98B /* Types.graphql.swift */,
+				20914D3927656BB5000CC98B /* bannzai.graphql.swift */,
+			);
+			path = GraphQL;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -162,6 +179,7 @@
 				205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */,
 				205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */,
 				20914D33276563A9000CC98B /* Info.plist in Resources */,
+				20914D3A27656BB5000CC98B /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,9 +194,11 @@
 				2003A33927654FA800371CAE /* StarButton.swift in Sources */,
 				205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */,
 				2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */,
+				20914D3B27656BB5000CC98B /* Types.graphql.swift in Sources */,
 				2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */,
 				2003A33B27654FB900371CAE /* RepositoryList.swift in Sources */,
 				205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */,
+				20914D3C27656BB5000CC98B /* bannzai.graphql.swift in Sources */,
 				2003A33527654F8700371CAE /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
