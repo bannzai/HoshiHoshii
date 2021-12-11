@@ -1,0 +1,22 @@
+query BannzaiRepositories($after: String) { 
+  user(login: "bannzai") {
+    repositories(first:30, after: $after, privacy: PUBLIC, isFork: false, orderBy: {field: CREATED_AT, direction: DESC}) {
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+      edges {
+        cursor
+        node {
+          id
+          name
+          description
+          url
+          viewerHasStarred
+        }
+      }
+    }
+  }
+}
