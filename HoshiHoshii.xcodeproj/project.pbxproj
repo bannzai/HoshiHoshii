@@ -23,6 +23,9 @@
 		20914D3A27656BB5000CC98B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 20914D3727656BB5000CC98B /* .gitkeep */; };
 		20914D3B27656BB5000CC98B /* Types.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3827656BB5000CC98B /* Types.graphql.swift */; };
 		20914D3C27656BB5000CC98B /* bannzai.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3927656BB5000CC98B /* bannzai.graphql.swift */; };
+		20914D3E27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */; };
+		20914D4027656C32000CC98B /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3F27656C32000CC98B /* AccessToken.swift */; };
+		20914D4227656C98000CC98B /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		20914D3727656BB5000CC98B /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		20914D3827656BB5000CC98B /* Types.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.graphql.swift; sourceTree = "<group>"; };
 		20914D3927656BB5000CC98B /* bannzai.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bannzai.graphql.swift; sourceTree = "<group>"; };
+		20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationHeaderAddingInterceptor.swift; sourceTree = "<group>"; };
+		20914D3F27656C32000CC98B /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +93,11 @@
 				205AEEA1275CE02B003E5D91 /* Assets.xcassets */,
 				205AEEA3275CE02B003E5D91 /* Preview Content */,
 				2003A33C2765500B00371CAE /* ApolloClient.swift */,
+				20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */,
+				20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */,
 				20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */,
 				20914D2F2765587C000CC98B /* Secret.swift */,
+				20914D3F27656C32000CC98B /* AccessToken.swift */,
 			);
 			path = HoshiHoshii;
 			sourceTree = "<group>";
@@ -193,8 +202,11 @@
 				20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */,
 				2003A33927654FA800371CAE /* StarButton.swift in Sources */,
 				205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */,
+				20914D3E27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift in Sources */,
 				2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */,
+				20914D4027656C32000CC98B /* AccessToken.swift in Sources */,
 				20914D3B27656BB5000CC98B /* Types.graphql.swift in Sources */,
+				20914D4227656C98000CC98B /* RequestLoggingInterceptor.swift in Sources */,
 				2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */,
 				2003A33B27654FB900371CAE /* RepositoryList.swift in Sources */,
 				205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */,
