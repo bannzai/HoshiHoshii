@@ -16,9 +16,6 @@ public struct KojikiPage: View {
                     UserProfile(fragment: userProfile)
                 }
 
-                Spacer()
-                    .frame(height: 10)
-
                 ForEach(repositories) { repository in
                     VStack(spacing: 0) {
                         RepositoryCard(fragment: repository)
