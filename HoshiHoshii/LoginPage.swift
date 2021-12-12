@@ -27,7 +27,6 @@ public struct LoginPage: View {
             .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color(red: 1, green: 1, blue: 1), lineWidth: 1))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.black)
         .handle(error: $error)
     }
 }

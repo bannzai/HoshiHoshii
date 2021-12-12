@@ -20,6 +20,8 @@ struct HoshiHoshiiApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appViewModel)
+                .preferredColorScheme(.dark)
         }
+
     }
 }
