@@ -35,6 +35,9 @@ public struct KojikiPage: View {
                 .padding(.horizontal, 16)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .refreshable {
+                await refresh()
+            }
             .navigationTitle(Text("Kojiki"))
             .task {
                 await request()
@@ -60,6 +63,22 @@ public struct KojikiPage: View {
             } catch {
                 print(error)
             }
+        }
+    }
+
+    private func refresh() async {
+        let query = BannzaiRepositoriesQuery(after: nil)
+
+        do {
+            let response = try await apollo.fetchFromServer(query: query)
+
+            userProfile = nil
+            repositories = []
+            pageInfo = nil
+
+            setResponse(response)
+        } catch {
+            self.error = error
         }
     }
 
