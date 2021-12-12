@@ -35,6 +35,9 @@ public struct KojikiPage: View {
                 .padding(.horizontal, 16)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .refreshable {
+                await refresh()
+            }
             .navigationTitle(Text("Kojiki"))
             .task {
                 await request()
@@ -48,17 +51,34 @@ public struct KojikiPage: View {
         do {
             setResponse(try? await apollo.fetchFromCache(query: query))
             setResponse(try await apollo.fetchFromServer(query: query))
-            
         } catch {
             self.error = error
         }
 
-        do {
-            for try await response in apollo.watch(query: query) {
-                setResponse(response)
+        Task { @MainActor in
+            do {
+                for try await response in apollo.watch(query: query) {
+                    setResponse(response)
+                }
+            } catch {
+                print(error)
             }
+        }
+    }
+
+    private func refresh() async {
+        let query = BannzaiRepositoriesQuery(after: nil)
+
+        do {
+            let response = try await apollo.fetchFromServer(query: query)
+
+            userProfile = nil
+            repositories = []
+            pageInfo = nil
+
+            setResponse(response)
         } catch {
-            print(error)
+            self.error = error
         }
     }
 
