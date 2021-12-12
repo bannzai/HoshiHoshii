@@ -52,12 +52,14 @@ public struct KojikiPage: View {
             self.error = error
         }
 
-        do {
-            for try await response in apollo.watch(query: query) {
-                setResponse(response)
+        Task { @MainActor in
+            do {
+                for try await response in apollo.watch(query: query) {
+                    setResponse(response)
+                }
+            } catch {
+                print(error)
             }
-        } catch {
-            print(error)
         }
     }
 
