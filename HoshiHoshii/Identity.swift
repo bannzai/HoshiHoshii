@@ -10,9 +10,15 @@ struct Identity<T>: Identifiable {
     }
 }
 
-extension Identity: Error where T: Error {
-    var error: Error {
-        value
+extension Identity: Error, LocalizedError where T: Error {
+    var error: Error { value }
+
+    var errorDescription: String? {
+        error.localizedDescription
     }
+    // TODO:
+    var failureReason: String? { nil }
+    var recoverySuggestion: String? { nil }
+    var helpAnchor: String? { nil }
 }
 
