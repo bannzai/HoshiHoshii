@@ -105,6 +105,46 @@ extension AppApolloClient {
             }
         }
     }
+
+    actor WatchCanceller {
+        var canceller: Apollo.Cancellable?
+
+        func setCanceller(_ canceller: Apollo.Cancellable) {
+            self.canceller = canceller
+        }
+        func cancel() {
+            canceller?.cancel()
+        }
+    }
+    func watch<Query: GraphQLQuery>(query: Query) -> AsyncThrowingStream<Query.Data, Error> {
+        AsyncThrowingStream { continuation in
+            Task {
+                let canceller = WatchCanceller()
+                continuation.onTermination = { @Sendable _ in
+                    Task {
+                        await canceller.cancel()
+                    }
+                }
+
+                let apolloCanceller = apollo.watch(query: query) { result in
+                    do {
+                        let response = try result.get()
+                        if let data = response.data {
+                            continuation.yield(data)
+                        } else if let errors = response.errors, !errors.isEmpty {
+                            continuation.finish(throwing: AppGraphQLError(errors))
+                        } else {
+                            fatalError("Unexpected result.data and result.errors not found. Maybe apollo-ios or server side application bug")
+                        }
+                    } catch {
+                        continuation.finish(throwing: error)
+                    }
+                }
+
+                await canceller.setCanceller(apolloCanceller)
+            }
+        }
+    }
 }
 
 public struct AppApolloClientEnvironmentKey: EnvironmentKey {

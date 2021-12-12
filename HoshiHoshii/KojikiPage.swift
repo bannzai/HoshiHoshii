@@ -43,8 +43,12 @@ public struct KojikiPage: View {
     }
 
     private func request() async throws {
-        setResponse(try? await apollo.fetchFromCache(query: BannzaiRepositoriesQuery(after: pageInfo?.endCursor)))
-        setResponse(try await apollo.fetchFromServer(query: BannzaiRepositoriesQuery(after: pageInfo?.endCursor)))
+        let query = BannzaiRepositoriesQuery(after: pageInfo?.endCursor)
+        setResponse(try? await apollo.fetchFromCache(query: query))
+        setResponse(try await apollo.fetchFromServer(query: query))
+        for try await response in apollo.watch(query: query) {
+            setResponse(response)
+        }
     }
 
     private func setResponse(_ data: BannzaiRepositoriesQuery.Data?) {
