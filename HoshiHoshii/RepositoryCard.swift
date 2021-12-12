@@ -25,7 +25,7 @@ public struct RepositoryCard: View {
                     }
                 }
                 Spacer()
-                StarButton()
+                StarButton(fragment: fragment.fragments.starButtonFragment)
             }
             .frame(maxWidth: .infinity)
             if let description = fragment.description {
