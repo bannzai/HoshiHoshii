@@ -15,7 +15,7 @@ public struct StarButton: View {
                     self.error = error
                 }
             }
-        }, label: {
+        }) {
             HStack(alignment: .center, spacing: 4) {
                 if fragment.viewerIsGod {
                     Image(systemName: "star.fill")
@@ -29,7 +29,9 @@ public struct StarButton: View {
             .background(Color(red: 0.30980393290519714, green: 0.30980393290519714, blue: 0.30980393290519714))
             .cornerRadius(8)
             .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color(red: 1, green: 1, blue: 1), lineWidth: 1))
-        }).handle(error: $error)
+        }
+        .handle(error: $error)
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
