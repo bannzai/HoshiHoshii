@@ -58,8 +58,15 @@ public struct KojikiPage: View {
         if let userProfileFragment = data.user?.fragments.userProfileFragment {
             userProfile = userProfileFragment
         }
-        if let repositoryFragment = data.user?.repositories.edges?.compactMap(\.?.node?.fragments.repositoryCardFragment) {
-            repositories += repositoryFragment
+        if let repositoryCardFragments = data.user?.repositories.edges?.compactMap(\.?.node?.fragments.repositoryCardFragment) {
+            let copied = repositories
+            repositories = repositoryCardFragments.reduce(into: copied) { partialResult, repositoryCardFragment in
+                if let index = partialResult.firstIndex(where: { $0.id == repositoryCardFragment.id }) {
+                    partialResult[index] = repositoryCardFragment
+                } else {
+                    partialResult.append(repositoryCardFragment)
+                }
+            }
         }
         if let pageInfoFragment = data.user?.repositories.pageInfo.fragments.pageInfoFragment {
             pageInfo = pageInfoFragment
