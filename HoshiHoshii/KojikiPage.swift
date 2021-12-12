@@ -25,6 +25,13 @@ public struct KojikiPage: View {
                             RepositoryCard(fragment: repository)
                             Spacer().frame(height: 8)
                         }
+                        .task {
+                            if let pageInfo = pageInfo, pageInfo.hasNextPage {
+                                if repositories.last?.id == repository.id {
+                                    await request()
+                                }
+                            }
+                        }
                     }
                 }
                 .padding(.horizontal, 16)
@@ -33,21 +40,28 @@ public struct KojikiPage: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .navigationTitle(Text("Kojiki"))
             .task {
-                do {
-                    try await request()
-                } catch {
-                    self.error = error
-                }
+                await request()
             }
         }
     }
 
-    private func request() async throws {
+    private func request() async {
         let query = BannzaiRepositoriesQuery(after: pageInfo?.endCursor)
-        setResponse(try? await apollo.fetchFromCache(query: query))
-        setResponse(try await apollo.fetchFromServer(query: query))
-        for try await response in apollo.watch(query: query) {
-            setResponse(response)
+
+        do {
+            setResponse(try? await apollo.fetchFromCache(query: query))
+            setResponse(try await apollo.fetchFromServer(query: query))
+            
+        } catch {
+            self.error = error
+        }
+
+        do {
+            for try await response in apollo.watch(query: query) {
+                setResponse(response)
+            }
+        } catch {
+            print(error)
         }
     }
 
