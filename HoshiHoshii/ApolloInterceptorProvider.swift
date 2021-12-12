@@ -7,17 +7,19 @@ import ApolloSQLite
 public struct AppApolloInterceptorProvider: InterceptorProvider {
     private let store: ApolloStore
     private let client: URLSessionClient
+    private let me: Me
 
-    public init(store: ApolloStore, client: URLSessionClient) {
+    public init(store: ApolloStore, client: URLSessionClient, me: Me) {
         self.store = store
         self.client = client
+        self.me = me
     }
 
     public func interceptors<Operation: GraphQLOperation>(for operation: Operation) -> [ApolloInterceptor] {
         return [
             MaxRetryInterceptor(),
             CacheReadInterceptor(store: store),
-            AuthorizationHeaderAddingInterceptor(),
+            AuthorizationHeaderAddingInterceptor(accessToken: me.accessToken),
             RequestLoggingInterceptor(),
             NetworkFetchInterceptor(client: client),
             ResponseCodeInterceptor(),
