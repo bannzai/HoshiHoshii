@@ -1,5 +1,6 @@
 import Foundation
 import Apollo
+import FirebaseAuth
 
 public class AuthorizationHeaderAddingInterceptor: ApolloInterceptor {
     public func interceptAsync<Operation: GraphQLOperation>(
@@ -7,13 +8,30 @@ public class AuthorizationHeaderAddingInterceptor: ApolloInterceptor {
         request: HTTPRequest<Operation>,
         response: HTTPResponse<Operation>?,
         completion: @escaping (Result<GraphQLResult<Operation.Data>, Error>) -> Void) {
-            request.addHeader(name: "Authorization", value: "Bearer \(AccessToken.accessToken!)")
+            guard let currentUser = Auth.auth().currentUser else {
+                return
+            }
 
-            chain.proceedAsync(
-                request: request,
-                response: response,
-                completion: completion
-            )
+            currentUser.getIDToken(completion: { idToken, error in
+                if let error = error {
+                    if case .networkError = AuthErrorCode(rawValue: error._code) {
+                        chain.retry(request: request, completion: completion)
+                    } else {
+                        chain.handleErrorAsync(error, request: request, response: response, completion: completion)
+                    }
+                } else if let idToken = idToken {
+                    request.addHeader(name: "Authorization", value: "Bearer \(idToken)")
+
+                    chain.proceedAsync(
+                        request: request,
+                        response: response,
+                        completion: completion
+                    )
+                } else {
+                    fatalError("unexpected error and idToken are nil")
+                }
+            })
         }
 }
+
 
