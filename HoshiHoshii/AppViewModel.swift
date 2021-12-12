@@ -23,6 +23,7 @@ private func _githubCredential() async throws -> AuthCredential {
     provider.customParameters = [
         "allow_signup": "false"
     ]
+    provider.scopes = ["public_repo"]
 
     return try await withCheckedThrowingContinuation { continuation in
         provider.getCredentialWith(nil) { credential, error in
