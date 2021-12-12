@@ -36,8 +36,13 @@ fragment RepositoryCardFragment on Repository {
   name
   description
   url
-  viewerHasStarred
   openGraphImageUrl
   usesCustomOpenGraphImage
+
+  ...StarButtonFragment
 }
 
+fragment StarButtonFragment on Repository {
+  repositoryID: id
+  viewerIsGod: viewerHasStarred
+}
