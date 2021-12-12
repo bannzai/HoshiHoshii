@@ -1,6 +1,8 @@
-query BannzaiRepositories($after: String) { 
+query BannzaiRepositories($after: String) {
   user(login: "bannzai") {
-    repositories(first:30, after: $after, privacy: PUBLIC, isFork: false, orderBy: {field: CREATED_AT, direction: DESC}) {
+    id
+    ...UserProfileFragment
+    repositories(first: 30, after: $after, privacy: PUBLIC, isFork: false, orderBy: {field: CREATED_AT, direction: DESC}) {
       pageInfo {
         startCursor
         endCursor
@@ -11,12 +13,24 @@ query BannzaiRepositories($after: String) {
         cursor
         node {
           id
-          name
-          description
-          url
-          viewerHasStarred
+          ...RepositoryCardFragment
         }
       }
     }
   }
+}
+
+fragment UserProfileFragment on User {
+  id
+  login
+  name
+  avatarUrl
+}
+
+fragment RepositoryCardFragment on Repository {
+  id
+  name
+  description
+  url
+  viewerHasStarred
 }
