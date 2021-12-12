@@ -11,7 +11,7 @@ public struct KojikiPage: View {
 
     public var body: some View {
         NavigationView {
-            VStack(alignment: .center, spacing: 0) {
+            NoDecorationList {
                 if let userProfile = userProfile {
                     UserProfile(fragment: userProfile)
                 }
@@ -19,17 +19,15 @@ public struct KojikiPage: View {
                 Spacer()
                     .frame(height: 10)
 
-                NoDecorationList {
-                    ForEach(repositories) { repository in
-                        VStack(spacing: 0) {
-                            RepositoryCard(fragment: repository)
-                            Spacer().frame(height: 8)
-                        }
-                        .task {
-                            if let pageInfo = pageInfo, pageInfo.hasNextPage {
-                                if repositories.last?.id == repository.id {
-                                    await request()
-                                }
+                ForEach(repositories) { repository in
+                    VStack(spacing: 0) {
+                        RepositoryCard(fragment: repository)
+                        Spacer().frame(height: 8)
+                    }
+                    .task {
+                        if let pageInfo = pageInfo, pageInfo.hasNextPage {
+                            if repositories.last?.id == repository.id {
+                                await request()
                             }
                         }
                     }
@@ -37,7 +35,6 @@ public struct KojikiPage: View {
                 .padding(.horizontal, 16)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .navigationTitle(Text("Kojiki"))
             .task {
                 await request()
