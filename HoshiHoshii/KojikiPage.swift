@@ -48,7 +48,6 @@ public struct KojikiPage: View {
         do {
             setResponse(try? await apollo.fetchFromCache(query: query))
             setResponse(try await apollo.fetchFromServer(query: query))
-            
         } catch {
             self.error = error
         }
