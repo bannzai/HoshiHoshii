@@ -2,16 +2,63 @@ import Foundation
 import SwiftUI
 
 public struct KojikiPage: View {
+    @Environment(\.apollo) var apollo
+
+    @State var repositories: [RepositoryCardFragment] = []
+    @State var userProfile: UserProfileFragment?
+    @State var pageInfo: PageInfoFragment?
+    @State var error: Error?
+
     public var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
-                UserProfile()
+                if let userProfile = userProfile {
+                    UserProfile(fragment: userProfile)
+                }
+
                 Spacer()
                     .frame(height: 10)
-                RepositoryList()
+
+                NoDecorationList {
+                    ForEach(repositories) { repository in
+                        VStack(spacing: 0) {
+                            RepositoryCard(fragment: repository)
+                            Spacer().frame(height: 8)
+                        }
+                    }
+                }
+                .padding(.horizontal, 16)
+                .frame(maxWidth: .infinity, alignment: .top)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .navigationTitle(Text("Kojiki"))
+            .task {
+                do {
+                    try await request()
+                } catch {
+                    self.error = error
+                }
+            }
+        }
+    }
+
+    private func request() async throws {
+        setResponse(try? await apollo.fetchFromCache(query: BannzaiRepositoriesQuery(after: pageInfo?.endCursor)))
+        setResponse(try await apollo.fetchFromServer(query: BannzaiRepositoriesQuery(after: pageInfo?.endCursor)))
+    }
+
+    private func setResponse(_ data: BannzaiRepositoriesQuery.Data?) {
+        guard let data = data else {
+            return
+        }
+        if let userProfileFragment = data.user?.fragments.userProfileFragment {
+            userProfile = userProfileFragment
+        }
+        if let repositoryFragment = data.user?.repositories.edges?.compactMap(\.?.node?.fragments.repositoryCardFragment) {
+            repositories += repositoryFragment
+        }
+        if let pageInfoFragment = data.user?.repositories.pageInfo.fragments.pageInfoFragment {
+            pageInfo = pageInfoFragment
         }
     }
 }
