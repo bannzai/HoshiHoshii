@@ -11,7 +11,7 @@
             <string>com.bannzai.hoshihoshii.dev</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>GITHUB_NOTIFICATION_MANAGER_URL_SCHEMA</string>
+                <string>OAUTH_CALL_BACK_URL_SCHEME</string>
             </array>
         </dict>
 	</array>
