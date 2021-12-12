@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import FirebaseAuth
 
-final class AppViewModel: ObservableObject {
+@MainActor final class AppViewModel: ObservableObject {
     @Published var me: Me?
     @Environment(\.apollo) var apollo
 
