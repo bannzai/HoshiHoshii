@@ -27,7 +27,7 @@ public struct KojikiPage: View {
                     .task {
                         if let pageInfo = pageInfo, pageInfo.hasNextPage {
                             if repositories.last?.id == repository.id {
-                                await request()
+                                await request(endCursor: pageInfo.endCursor)
                             }
                         }
                     }
@@ -37,13 +37,13 @@ public struct KojikiPage: View {
             }
             .navigationTitle(Text("Kojiki"))
             .task {
-                await request()
+                await request(endCursor: pageInfo?.endCursor)
             }
         }
     }
 
-    private func request() async {
-        let query = BannzaiRepositoriesQuery(after: pageInfo?.endCursor)
+    private func request(endCursor: String?) async {
+        let query = BannzaiRepositoriesQuery(after: endCursor)
 
         do {
             setResponse(try? await apollo.fetchFromCache(query: query))
