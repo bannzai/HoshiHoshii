@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct HoshiHoshiiApp: App {
+    @StateObject var appViewModel = AppViewModel()
+
+    init() {
+        FirebaseApp.configure()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appViewModel)
+                .preferredColorScheme(.dark)
         }
+
     }
 }

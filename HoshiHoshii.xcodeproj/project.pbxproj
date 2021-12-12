@@ -3,22 +3,69 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2003A33527654F8700371CAE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33427654F8700371CAE /* UserProfile.swift */; };
+		2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33627654F9800371CAE /* RepositoryCard.swift */; };
+		2003A33927654FA800371CAE /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33827654FA800371CAE /* StarButton.swift */; };
+		2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33C2765500B00371CAE /* ApolloClient.swift */; };
+		201E6531276571F000D065E5 /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E6530276571F000D065E5 /* Scalar.swift */; };
+		201E6534276592EB00D065E5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6533276592EB00D065E5 /* FirebaseAuth */; };
+		201E6536276592EB00D065E5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6535276592EB00D065E5 /* FirebaseFirestore */; };
+		201E6538276592EB00D065E5 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */; };
+		201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 201E65392765BA2000D065E5 /* GoogleService-Info.plist */; };
+		201E653C2765BB8C00D065E5 /* KojikiPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E653B2765BB8C00D065E5 /* KojikiPage.swift */; };
+		201E653E2765BB9700D065E5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E653D2765BB9700D065E5 /* LoginPage.swift */; };
+		201E65422765BCAD00D065E5 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65412765BCAD00D065E5 /* AppViewModel.swift */; };
+		201E65442765CEB800D065E5 /* ErrorHandlerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65432765CEB800D065E5 /* ErrorHandlerModifier.swift */; };
+		201E65462765D7F600D065E5 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65452765D7F600D065E5 /* Identity.swift */; };
+		201E65482765EB7300D065E5 /* NoDecorationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65472765EB7300D065E5 /* NoDecorationList.swift */; };
+		201E654E27660C8C00D065E5 /* star.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E654D27660C8C00D065E5 /* star.graphql.swift */; };
 		205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */; };
 		205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9F275CE02B003E5D91 /* ContentView.swift */; };
 		205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AEEA1275CE02B003E5D91 /* Assets.xcassets */; };
 		205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AEEA4275CE02B003E5D91 /* Preview Assets.xcassets */; };
+		20914D2C27655708000CC98B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2B27655708000CC98B /* Apollo */; };
+		20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 20914D2D27655708000CC98B /* ApolloSQLite */; };
+		20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */; };
+		20914D3A27656BB5000CC98B /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 20914D3727656BB5000CC98B /* .gitkeep */; };
+		20914D3B27656BB5000CC98B /* Types.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3827656BB5000CC98B /* Types.graphql.swift */; };
+		20914D3C27656BB5000CC98B /* bannzai.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3927656BB5000CC98B /* bannzai.graphql.swift */; };
+		20914D3E27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */; };
+		20914D4027656C32000CC98B /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3F27656C32000CC98B /* Me.swift */; };
+		20914D4227656C98000CC98B /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2003A33427654F8700371CAE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2003A33627654F9800371CAE /* RepositoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCard.swift; sourceTree = "<group>"; };
+		2003A33827654FA800371CAE /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
+		2003A33C2765500B00371CAE /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
+		201E652D276571B900D065E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		201E6530276571F000D065E5 /* Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
+		201E65392765BA2000D065E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		201E653B2765BB8C00D065E5 /* KojikiPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KojikiPage.swift; sourceTree = "<group>"; };
+		201E653D2765BB9700D065E5 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		201E65412765BCAD00D065E5 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		201E65432765CEB800D065E5 /* ErrorHandlerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerModifier.swift; sourceTree = "<group>"; };
+		201E65452765D7F600D065E5 /* Identity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
+		201E65472765EB7300D065E5 /* NoDecorationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDecorationList.swift; sourceTree = "<group>"; };
+		201E654D27660C8C00D065E5 /* star.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = star.graphql.swift; sourceTree = "<group>"; };
 		205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoshiHoshii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiHoshiiApp.swift; sourceTree = "<group>"; };
 		205AEE9F275CE02B003E5D91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		205AEEA1275CE02B003E5D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205AEEA4275CE02B003E5D91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20914D2F2765587C000CC98B /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloInterceptorProvider.swift; sourceTree = "<group>"; };
+		20914D3727656BB5000CC98B /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		20914D3827656BB5000CC98B /* Types.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.graphql.swift; sourceTree = "<group>"; };
+		20914D3927656BB5000CC98B /* bannzai.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bannzai.graphql.swift; sourceTree = "<group>"; };
+		20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationHeaderAddingInterceptor.swift; sourceTree = "<group>"; };
+		20914D3F27656C32000CC98B /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
+		20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +73,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20914D2C27655708000CC98B /* Apollo in Frameworks */,
+				201E6536276592EB00D065E5 /* FirebaseFirestore in Frameworks */,
+				201E6538276592EB00D065E5 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				201E6534276592EB00D065E5 /* FirebaseAuth in Frameworks */,
+				20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201E652F276571EB00D065E5 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				201E6530276571F000D065E5 /* Scalar.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		205AEE91275CE02B003E5D91 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +111,28 @@
 		205AEE9C275CE02B003E5D91 /* HoshiHoshii */ = {
 			isa = PBXGroup;
 			children = (
+				201E652D276571B900D065E5 /* Info.plist */,
+				201E65392765BA2000D065E5 /* GoogleService-Info.plist */,
+				20914D3627656BB5000CC98B /* GraphQL */,
 				205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */,
 				205AEE9F275CE02B003E5D91 /* ContentView.swift */,
+				201E65432765CEB800D065E5 /* ErrorHandlerModifier.swift */,
+				201E65452765D7F600D065E5 /* Identity.swift */,
+				201E653B2765BB8C00D065E5 /* KojikiPage.swift */,
+				201E653D2765BB9700D065E5 /* LoginPage.swift */,
+				201E65472765EB7300D065E5 /* NoDecorationList.swift */,
+				2003A33827654FA800371CAE /* StarButton.swift */,
+				2003A33627654F9800371CAE /* RepositoryCard.swift */,
+				2003A33427654F8700371CAE /* UserProfile.swift */,
 				205AEEA1275CE02B003E5D91 /* Assets.xcassets */,
 				205AEEA3275CE02B003E5D91 /* Preview Content */,
+				2003A33C2765500B00371CAE /* ApolloClient.swift */,
+				20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */,
+				20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */,
+				20914D3427656418000CC98B /* ApolloInterceptorProvider.swift */,
+				20914D2F2765587C000CC98B /* Secret.swift */,
+				20914D3F27656C32000CC98B /* Me.swift */,
+				201E65412765BCAD00D065E5 /* AppViewModel.swift */,
 			);
 			path = HoshiHoshii;
 			sourceTree = "<group>";
@@ -66,6 +144,18 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		20914D3627656BB5000CC98B /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				201E652F276571EB00D065E5 /* Custom */,
+				20914D3727656BB5000CC98B /* .gitkeep */,
+				20914D3827656BB5000CC98B /* Types.graphql.swift */,
+				201E654D27660C8C00D065E5 /* star.graphql.swift */,
+				20914D3927656BB5000CC98B /* bannzai.graphql.swift */,
+			);
+			path = GraphQL;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -83,6 +173,13 @@
 			dependencies = (
 			);
 			name = HoshiHoshii;
+			packageProductDependencies = (
+				20914D2B27655708000CC98B /* Apollo */,
+				20914D2D27655708000CC98B /* ApolloSQLite */,
+				201E6533276592EB00D065E5 /* FirebaseAuth */,
+				201E6535276592EB00D065E5 /* FirebaseFirestore */,
+				201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = HoshiHoshii;
 			productReference = 205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */;
 			productType = "com.apple.product-type.application";
@@ -103,7 +200,7 @@
 				};
 			};
 			buildConfigurationList = 205AEE95275CE02B003E5D91 /* Build configuration list for PBXProject "HoshiHoshii" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,6 +208,10 @@
 				Base,
 			);
 			mainGroup = 205AEE91275CE02B003E5D91;
+			packageReferences = (
+				20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 205AEE9B275CE02B003E5D91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */,
+				201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */,
 				205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */,
+				20914D3A27656BB5000CC98B /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +240,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201E654E27660C8C00D065E5 /* star.graphql.swift in Sources */,
+				201E653E2765BB9700D065E5 /* LoginPage.swift in Sources */,
+				20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */,
+				2003A33927654FA800371CAE /* StarButton.swift in Sources */,
+				201E6531276571F000D065E5 /* Scalar.swift in Sources */,
 				205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */,
+				20914D3E27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift in Sources */,
+				2003A33727654F9800371CAE /* RepositoryCard.swift in Sources */,
+				20914D4027656C32000CC98B /* Me.swift in Sources */,
+				201E65442765CEB800D065E5 /* ErrorHandlerModifier.swift in Sources */,
+				201E65422765BCAD00D065E5 /* AppViewModel.swift in Sources */,
+				201E65462765D7F600D065E5 /* Identity.swift in Sources */,
+				20914D3B27656BB5000CC98B /* Types.graphql.swift in Sources */,
+				20914D4227656C98000CC98B /* RequestLoggingInterceptor.swift in Sources */,
+				2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */,
 				205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */,
+				201E653C2765BB8C00D065E5 /* KojikiPage.swift in Sources */,
+				20914D3C27656BB5000CC98B /* bannzai.graphql.swift in Sources */,
+				201E65482765EB7300D065E5 /* NoDecorationList.swift in Sources */,
+				2003A33527654F8700371CAE /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +393,7 @@
 				DEVELOPMENT_TEAM = TQPN82UBBY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoshiHoshii/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,11 +404,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.hoshihoshii.HoshiHoshii;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.hoshihoshii.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +423,7 @@
 				DEVELOPMENT_TEAM = TQPN82UBBY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoshiHoshii/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,11 +434,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.hoshihoshii.HoshiHoshii;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bannzai.hoshihoshii.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +464,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 8.10.0;
+			};
+		};
+		20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.49.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		201E6533276592EB00D065E5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		201E6535276592EB00D065E5 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		20914D2B27655708000CC98B /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		20914D2D27655708000CC98B /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 205AEE92275CE02B003E5D91 /* Project object */;
 }

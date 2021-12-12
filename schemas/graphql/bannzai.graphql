@@ -1,0 +1,48 @@
+query BannzaiRepositories($after: String) {
+  user(login: "bannzai") {
+    id
+    ...UserProfileFragment
+    repositories(first: 30, after: $after, privacy: PUBLIC, isFork: false, orderBy: {field: CREATED_AT, direction: DESC}) {
+      pageInfo {
+        ...PageInfoFragment
+      }
+      edges {
+        cursor
+        node {
+          id
+          ...RepositoryCardFragment
+        }
+      }
+    }
+  }
+}
+
+fragment PageInfoFragment on PageInfo {
+  startCursor
+  endCursor
+  hasNextPage
+  hasPreviousPage
+}
+
+fragment UserProfileFragment on User {
+  id
+  login
+  name
+  avatarUrl
+}
+
+fragment RepositoryCardFragment on Repository {
+  id
+  name
+  description
+  url
+  openGraphImageUrl
+  usesCustomOpenGraphImage
+
+  ...StarButtonFragment
+}
+
+fragment StarButtonFragment on Repository {
+  repositoryID: id
+  viewerIsGod: viewerHasStarred
+}

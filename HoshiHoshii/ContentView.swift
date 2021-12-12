@@ -1,21 +1,21 @@
-//
-//  ContentView.swift
-//  HoshiHoshii
-//
-//  Created by 廣瀬雄大 on 2021/12/05.
-//
-
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+public struct ContentView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
+
+    public var body: some View {
+        if let me = appViewModel.me {
+            KojikiPage()
+                .environment(\.me, .init(me: me))
+        } else {
+            LoginPage()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
