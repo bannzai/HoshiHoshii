@@ -16,6 +16,7 @@
 		201E6534276592EB00D065E5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6533276592EB00D065E5 /* FirebaseAuth */; };
 		201E6536276592EB00D065E5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6535276592EB00D065E5 /* FirebaseFirestore */; };
 		201E6538276592EB00D065E5 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */; };
+		201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 201E65392765BA2000D065E5 /* GoogleService-Info.plist */; };
 		205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */; };
 		205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9F275CE02B003E5D91 /* ContentView.swift */; };
 		205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AEEA1275CE02B003E5D91 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		2003A33C2765500B00371CAE /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
 		201E652D276571B900D065E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201E6530276571F000D065E5 /* Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
+		201E65392765BA2000D065E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoshiHoshii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiHoshiiApp.swift; sourceTree = "<group>"; };
 		205AEE9F275CE02B003E5D91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				201E652D276571B900D065E5 /* Info.plist */,
+				201E65392765BA2000D065E5 /* GoogleService-Info.plist */,
 				20914D3627656BB5000CC98B /* GraphQL */,
 				205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */,
 				205AEE9F275CE02B003E5D91 /* ContentView.swift */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */,
+				201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */,
 				205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */,
 				20914D3A27656BB5000CC98B /* .gitkeep in Resources */,
 			);
