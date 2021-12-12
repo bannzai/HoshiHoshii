@@ -4,10 +4,7 @@ query BannzaiRepositories($after: String) {
     ...UserProfileFragment
     repositories(first: 30, after: $after, privacy: PUBLIC, isFork: false, orderBy: {field: CREATED_AT, direction: DESC}) {
       pageInfo {
-        startCursor
-        endCursor
-        hasNextPage
-        hasPreviousPage
+        ...PageInfoFragment
       }
       edges {
         cursor
@@ -18,6 +15,13 @@ query BannzaiRepositories($after: String) {
       }
     }
   }
+}
+
+fragment PageInfoFragment on PageInfo {
+  startCursor
+  endCursor
+  hasNextPage
+  hasPreviousPage
 }
 
 fragment UserProfileFragment on User {
@@ -33,4 +37,7 @@ fragment RepositoryCardFragment on Repository {
   description
   url
   viewerHasStarred
+  openGraphImageUrl
+  usesCustomOpenGraphImage
 }
+
