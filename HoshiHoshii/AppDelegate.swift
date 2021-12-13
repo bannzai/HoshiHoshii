@@ -44,20 +44,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         let userInfo = notification.request.content.userInfo
-
         Messaging.messaging().appDidReceiveMessage(userInfo)
-
-        // Change this to your preferred presentation option
-        completionHandler([[.alert, .sound]])
+        completionHandler([[.banner, .sound]])
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
-
         Messaging.messaging().appDidReceiveMessage(userInfo)
-
         completionHandler()
     }
 
