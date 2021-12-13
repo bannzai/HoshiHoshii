@@ -22,6 +22,7 @@ public struct ShootingStarButton: View {
             })
             Button("bannzaiを悲しませる", role: .cancel, action: {
                 isPresentingConfirmDialog = false
+                exit(1)
             })
         })
         .buttonStyle(PlainButtonStyle())
