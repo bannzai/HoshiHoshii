@@ -23,6 +23,8 @@
 		201E65462765D7F600D065E5 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65452765D7F600D065E5 /* Identity.swift */; };
 		201E65482765EB7300D065E5 /* NoDecorationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65472765EB7300D065E5 /* NoDecorationList.swift */; };
 		201E654E27660C8C00D065E5 /* star.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E654D27660C8C00D065E5 /* star.graphql.swift */; };
+		201E65522766C59200D065E5 /* ShootingStarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65512766C59200D065E5 /* ShootingStarButton.swift */; };
+		201E65542766CCB700D065E5 /* repository_all.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65532766CCB700D065E5 /* repository_all.graphql.swift */; };
 		205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */; };
 		205AEEA0275CE02B003E5D91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AEE9F275CE02B003E5D91 /* ContentView.swift */; };
 		205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AEEA1275CE02B003E5D91 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		201E65452765D7F600D065E5 /* Identity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		201E65472765EB7300D065E5 /* NoDecorationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDecorationList.swift; sourceTree = "<group>"; };
 		201E654D27660C8C00D065E5 /* star.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = star.graphql.swift; sourceTree = "<group>"; };
+		201E65512766C59200D065E5 /* ShootingStarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingStarButton.swift; sourceTree = "<group>"; };
+		201E65532766CCB700D065E5 /* repository_all.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repository_all.graphql.swift; sourceTree = "<group>"; };
 		205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoshiHoshii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205AEE9D275CE02B003E5D91 /* HoshiHoshiiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiHoshiiApp.swift; sourceTree = "<group>"; };
 		205AEE9F275CE02B003E5D91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				201E65452765D7F600D065E5 /* Identity.swift */,
 				201E653B2765BB8C00D065E5 /* KojikiPage.swift */,
 				201E653D2765BB9700D065E5 /* LoginPage.swift */,
+				201E65512766C59200D065E5 /* ShootingStarButton.swift */,
 				201E65472765EB7300D065E5 /* NoDecorationList.swift */,
 				2003A33827654FA800371CAE /* StarButton.swift */,
 				2003A33627654F9800371CAE /* RepositoryCard.swift */,
@@ -150,6 +155,7 @@
 			children = (
 				201E652F276571EB00D065E5 /* Custom */,
 				20914D3727656BB5000CC98B /* .gitkeep */,
+				201E65532766CCB700D065E5 /* repository_all.graphql.swift */,
 				20914D3827656BB5000CC98B /* Types.graphql.swift */,
 				201E654D27660C8C00D065E5 /* star.graphql.swift */,
 				20914D3927656BB5000CC98B /* bannzai.graphql.swift */,
@@ -240,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201E65542766CCB700D065E5 /* repository_all.graphql.swift in Sources */,
 				201E654E27660C8C00D065E5 /* star.graphql.swift in Sources */,
 				201E653E2765BB9700D065E5 /* LoginPage.swift in Sources */,
 				20914D3527656418000CC98B /* ApolloInterceptorProvider.swift in Sources */,
@@ -257,6 +264,7 @@
 				2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */,
 				205AEE9E275CE02B003E5D91 /* HoshiHoshiiApp.swift in Sources */,
 				201E653C2765BB8C00D065E5 /* KojikiPage.swift in Sources */,
+				201E65522766C59200D065E5 /* ShootingStarButton.swift in Sources */,
 				20914D3C27656BB5000CC98B /* bannzai.graphql.swift in Sources */,
 				201E65482765EB7300D065E5 /* NoDecorationList.swift in Sources */,
 				2003A33527654F8700371CAE /* UserProfile.swift in Sources */,

@@ -32,13 +32,18 @@ public struct KojikiPage: View {
                 .padding(.horizontal, 16)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .task {
+                await request()
+            }
             .refreshable {
                 await refresh()
             }
             .navigationTitle(Text("Kojiki"))
-            .task {
-                await request()
-            }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ShootingStarButton()
+                }
+            })
         }
     }
 
