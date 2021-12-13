@@ -12,7 +12,6 @@
 		2003A33927654FA800371CAE /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33827654FA800371CAE /* StarButton.swift */; };
 		2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33C2765500B00371CAE /* ApolloClient.swift */; };
 		201E6531276571F000D065E5 /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E6530276571F000D065E5 /* Scalar.swift */; };
-		201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 201E65392765BA2000D065E5 /* GoogleService-Info.plist */; };
 		201E653C2765BB8C00D065E5 /* KojikiPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E653B2765BB8C00D065E5 /* KojikiPage.swift */; };
 		201E653E2765BB9700D065E5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E653D2765BB9700D065E5 /* LoginPage.swift */; };
 		201E65422765BCAD00D065E5 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E65412765BCAD00D065E5 /* AppViewModel.swift */; };
@@ -35,9 +34,12 @@
 		20914D3E27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */; };
 		20914D4027656C32000CC98B /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3F27656C32000CC98B /* Me.swift */; };
 		20914D4227656C98000CC98B /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */; };
+		20DC54A827676B2100014B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC54A727676B2100014B08 /* AppDelegate.swift */; };
+		20DC54AB27677F0500014B08 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 20DC54AA27677F0500014B08 /* FirebaseAnalytics */; };
+		20DC54AD27677F0500014B08 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 20DC54AC27677F0500014B08 /* FirebaseAuth */; };
+		20DC54AF27677F0500014B08 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 20DC54AE27677F0500014B08 /* FirebaseMessaging */; };
+		20DC54B02767977C00014B08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 201E65392765BA2000D065E5 /* GoogleService-Info.plist */; };
 		20DF0C34276713B50071998D /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF0C33276713B50071998D /* PushNotification.swift */; };
-		20DF0C42276717CB0071998D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 20DF0C41276717CB0071998D /* FirebaseAuth */; };
-		20DF0C44276717CB0071998D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 20DF0C43276717CB0071998D /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +72,9 @@
 		20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationHeaderAddingInterceptor.swift; sourceTree = "<group>"; };
 		20914D3F27656C32000CC98B /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
+		20DC54A727676B2100014B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DF0C33276713B50071998D /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		20EF563327675E52008DCC7A /* HoshiHoshii.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HoshiHoshii.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +82,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DF0C44276717CB0071998D /* FirebaseMessaging in Frameworks */,
 				20914D2C27655708000CC98B /* Apollo in Frameworks */,
-				20DF0C42276717CB0071998D /* FirebaseAuth in Frameworks */,
 				20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */,
+				20DC54AF27677F0500014B08 /* FirebaseMessaging in Frameworks */,
+				20DC54AB27677F0500014B08 /* FirebaseAnalytics in Frameworks */,
+				20DC54AD27677F0500014B08 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 		205AEE9C275CE02B003E5D91 /* HoshiHoshii */ = {
 			isa = PBXGroup;
 			children = (
+				20EF563327675E52008DCC7A /* HoshiHoshii.entitlements */,
 				201E652D276571B900D065E5 /* Info.plist */,
 				201E65392765BA2000D065E5 /* GoogleService-Info.plist */,
 				20914D3627656BB5000CC98B /* GraphQL */,
@@ -139,6 +145,7 @@
 				20914D3F27656C32000CC98B /* Me.swift */,
 				201E65412765BCAD00D065E5 /* AppViewModel.swift */,
 				20DF0C33276713B50071998D /* PushNotification.swift */,
+				20DC54A727676B2100014B08 /* AppDelegate.swift */,
 			);
 			path = HoshiHoshii;
 			sourceTree = "<group>";
@@ -183,8 +190,9 @@
 			packageProductDependencies = (
 				20914D2B27655708000CC98B /* Apollo */,
 				20914D2D27655708000CC98B /* ApolloSQLite */,
-				20DF0C41276717CB0071998D /* FirebaseAuth */,
-				20DF0C43276717CB0071998D /* FirebaseMessaging */,
+				20DC54AA27677F0500014B08 /* FirebaseAnalytics */,
+				20DC54AC27677F0500014B08 /* FirebaseAuth */,
+				20DC54AE27677F0500014B08 /* FirebaseMessaging */,
 			);
 			productName = HoshiHoshii;
 			productReference = 205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */;
@@ -216,7 +224,7 @@
 			mainGroup = 205AEE91275CE02B003E5D91;
 			packageReferences = (
 				20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				20DC54A927677F0500014B08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 205AEE9B275CE02B003E5D91 /* Products */;
 			projectDirPath = "";
@@ -233,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				205AEEA5275CE02B003E5D91 /* Preview Assets.xcassets in Resources */,
-				201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */,
+				20DC54B02767977C00014B08 /* GoogleService-Info.plist in Resources */,
 				205AEEA2275CE02B003E5D91 /* Assets.xcassets in Resources */,
 				20914D3A27656BB5000CC98B /* .gitkeep in Resources */,
 			);
@@ -246,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DC54A827676B2100014B08 /* AppDelegate.swift in Sources */,
 				20DF0C34276713B50071998D /* PushNotification.swift in Sources */,
 				201E65542766CCB700D065E5 /* repository_all.graphql.swift in Sources */,
 				201E654E27660C8C00D065E5 /* star.graphql.swift in Sources */,
@@ -396,6 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HoshiHoshii/HoshiHoshii.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HoshiHoshii/Preview Content\"";
@@ -426,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HoshiHoshii/HoshiHoshii.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HoshiHoshii/Preview Content\"";
@@ -483,7 +494,7 @@
 				minimumVersion = 0.49.0;
 			};
 		};
-		20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		20DC54A927677F0500014B08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -504,14 +515,19 @@
 			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloSQLite;
 		};
-		20DF0C41276717CB0071998D /* FirebaseAuth */ = {
+		20DC54AA27677F0500014B08 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 20DC54A927677F0500014B08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		20DC54AC27677F0500014B08 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20DC54A927677F0500014B08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		20DF0C43276717CB0071998D /* FirebaseMessaging */ = {
+		20DC54AE27677F0500014B08 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 20DC54A927677F0500014B08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
