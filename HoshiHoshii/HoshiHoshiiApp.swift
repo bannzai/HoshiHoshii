@@ -11,6 +11,7 @@ import Firebase
 @main
 struct HoshiHoshiiApp: App {
     @StateObject var appViewModel = AppViewModel()
+    @StateObject var pushNotification = PushNotification()
 
     init() {
         FirebaseApp.configure()
@@ -20,6 +21,7 @@ struct HoshiHoshiiApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appViewModel)
+                .environmentObject(pushNotification)
                 .preferredColorScheme(.dark)
         }
 
