@@ -1,8 +1,10 @@
 import Foundation
 import SwiftUI
+import UserNotifications
 
 public struct KojikiPage: View {
     @Environment(\.apollo) var apollo
+    @EnvironmentObject var pushNotification: PushNotification
 
     @State var repositories: [RepositoryCardFragment] = []
     @State var userProfile: UserProfileFragment?
@@ -34,6 +36,19 @@ public struct KojikiPage: View {
             }
             .task {
                 await request()
+
+                let authorizationStatus = await pushNotification.retrieveAuthorizationStatus()
+                switch authorizationStatus {
+                case .authorized, .ephemeral, .provisional:
+                    await pushNotification.requestAuthorization()
+                case .denied:
+                    return
+                case .notDetermined:
+                    // TODO:
+                    return
+                @unknown default:
+                    fatalError()
+                }
             }
             .refreshable {
                 await refresh()
