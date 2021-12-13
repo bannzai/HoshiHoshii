@@ -13,9 +13,7 @@ struct HoshiHoshiiApp: App {
     @StateObject var appViewModel = AppViewModel()
     @StateObject var pushNotification = PushNotification()
 
-    init() {
-        FirebaseApp.configure()
-    }
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
         WindowGroup {
