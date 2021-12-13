@@ -12,9 +12,6 @@
 		2003A33927654FA800371CAE /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33827654FA800371CAE /* StarButton.swift */; };
 		2003A33D2765500B00371CAE /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003A33C2765500B00371CAE /* ApolloClient.swift */; };
 		201E6531276571F000D065E5 /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E6530276571F000D065E5 /* Scalar.swift */; };
-		201E6534276592EB00D065E5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6533276592EB00D065E5 /* FirebaseAuth */; };
-		201E6536276592EB00D065E5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6535276592EB00D065E5 /* FirebaseFirestore */; };
-		201E6538276592EB00D065E5 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */; };
 		201E653A2765BA2000D065E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 201E65392765BA2000D065E5 /* GoogleService-Info.plist */; };
 		201E653C2765BB8C00D065E5 /* KojikiPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E653B2765BB8C00D065E5 /* KojikiPage.swift */; };
 		201E653E2765BB9700D065E5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E653D2765BB9700D065E5 /* LoginPage.swift */; };
@@ -38,6 +35,9 @@
 		20914D3E27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */; };
 		20914D4027656C32000CC98B /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D3F27656C32000CC98B /* Me.swift */; };
 		20914D4227656C98000CC98B /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */; };
+		20DF0C34276713B50071998D /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF0C33276713B50071998D /* PushNotification.swift */; };
+		20DF0C42276717CB0071998D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 20DF0C41276717CB0071998D /* FirebaseAuth */; };
+		20DF0C44276717CB0071998D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 20DF0C43276717CB0071998D /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +70,7 @@
 		20914D3D27656C1C000CC98B /* AuthorizationHeaderAddingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationHeaderAddingInterceptor.swift; sourceTree = "<group>"; };
 		20914D3F27656C32000CC98B /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		20914D4127656C98000CC98B /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
+		20DF0C33276713B50071998D /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DF0C44276717CB0071998D /* FirebaseMessaging in Frameworks */,
 				20914D2C27655708000CC98B /* Apollo in Frameworks */,
-				201E6536276592EB00D065E5 /* FirebaseFirestore in Frameworks */,
-				201E6538276592EB00D065E5 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				201E6534276592EB00D065E5 /* FirebaseAuth in Frameworks */,
+				20DF0C42276717CB0071998D /* FirebaseAuth in Frameworks */,
 				20914D2E27655708000CC98B /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +138,7 @@
 				20914D2F2765587C000CC98B /* Secret.swift */,
 				20914D3F27656C32000CC98B /* Me.swift */,
 				201E65412765BCAD00D065E5 /* AppViewModel.swift */,
+				20DF0C33276713B50071998D /* PushNotification.swift */,
 			);
 			path = HoshiHoshii;
 			sourceTree = "<group>";
@@ -182,9 +183,8 @@
 			packageProductDependencies = (
 				20914D2B27655708000CC98B /* Apollo */,
 				20914D2D27655708000CC98B /* ApolloSQLite */,
-				201E6533276592EB00D065E5 /* FirebaseAuth */,
-				201E6535276592EB00D065E5 /* FirebaseFirestore */,
-				201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */,
+				20DF0C41276717CB0071998D /* FirebaseAuth */,
+				20DF0C43276717CB0071998D /* FirebaseMessaging */,
 			);
 			productName = HoshiHoshii;
 			productReference = 205AEE9A275CE02B003E5D91 /* HoshiHoshii.app */;
@@ -216,7 +216,7 @@
 			mainGroup = 205AEE91275CE02B003E5D91;
 			packageReferences = (
 				20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */,
-				201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 205AEE9B275CE02B003E5D91 /* Products */;
 			projectDirPath = "";
@@ -246,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DF0C34276713B50071998D /* PushNotification.swift in Sources */,
 				201E65542766CCB700D065E5 /* repository_all.graphql.swift in Sources */,
 				201E654E27660C8C00D065E5 /* star.graphql.swift in Sources */,
 				201E653E2765BB9700D065E5 /* LoginPage.swift in Sources */,
@@ -474,14 +475,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 8.10.0;
-			};
-		};
 		20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios";
@@ -490,24 +483,17 @@
 				minimumVersion = 0.49.0;
 			};
 		};
+		20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 8.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		201E6533276592EB00D065E5 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		201E6535276592EB00D065E5 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		201E6537276592EB00D065E5 /* FirebaseFirestoreSwift-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 201E6532276592EB00D065E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreSwift-Beta";
-		};
 		20914D2B27655708000CC98B /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
@@ -517,6 +503,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 20914D2A27655708000CC98B /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloSQLite;
+		};
+		20DF0C41276717CB0071998D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		20DF0C43276717CB0071998D /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20DF0C40276717CB0071998D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
