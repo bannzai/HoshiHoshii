@@ -9,7 +9,7 @@ public struct ShootingStarButton: View {
     public var body: some View {
         Button(action: { isPresentingConfirmDialog = true }) {
             Image(systemName: "star.fill")
-                .emphasized()
+                .emphasize()
                 .padding(.all, 8)
         }
         .handle(error: $error)
@@ -72,7 +72,7 @@ struct Emphasize: ViewModifier {
 }
 
 extension View {
-    func emphasized() -> some View {
+    func emphasize() -> some View {
         modifier(Emphasize())
     }
 }
