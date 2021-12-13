@@ -37,18 +37,6 @@ public struct KojikiPage: View {
             .task {
                 await request()
 
-                let authorizationStatus = await pushNotification.retrieveAuthorizationStatus()
-                switch authorizationStatus {
-                case .authorized, .ephemeral, .provisional:
-                    await pushNotification.requestAuthorization()
-                case .denied:
-                    return
-                case .notDetermined:
-                    // TODO:
-                    return
-                @unknown default:
-                    fatalError()
-                }
             }
             .refreshable {
                 await refresh()
