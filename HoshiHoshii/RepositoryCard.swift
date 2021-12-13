@@ -37,6 +37,9 @@ public struct RepositoryCard: View {
         .padding(.all, 16)
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .background(Color(red: 0.30980393290519714, green: 0.30980393290519714, blue: 0.30980393290519714))
+        .onTapGesture {
+            UIApplication.shared.open(fragment.url)
+        }
     }
 }
 

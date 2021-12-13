@@ -29,6 +29,7 @@ fragment UserProfileFragment on User {
   login
   name
   avatarUrl
+  url
 }
 
 fragment RepositoryCardFragment on Repository {
@@ -46,3 +47,4 @@ fragment StarButtonFragment on Repository {
   repositoryID: id
   viewerIsGod: viewerHasStarred
 }
+

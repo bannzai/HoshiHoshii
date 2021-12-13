@@ -1,8 +1,10 @@
 import Foundation
 import SwiftUI
+import UserNotifications
 
 public struct KojikiPage: View {
     @Environment(\.apollo) var apollo
+    @EnvironmentObject var pushNotification: PushNotification
 
     @State var repositories: [RepositoryCardFragment] = []
     @State var userProfile: UserProfileFragment?
@@ -15,9 +17,6 @@ public struct KojikiPage: View {
                 if let userProfile = userProfile {
                     UserProfile(fragment: userProfile)
                 }
-
-                Spacer()
-                    .frame(height: 10)
 
                 ForEach(repositories) { repository in
                     VStack(spacing: 0) {
@@ -35,13 +34,19 @@ public struct KojikiPage: View {
                 .padding(.horizontal, 16)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .task {
+                await request()
+
+            }
             .refreshable {
                 await refresh()
             }
             .navigationTitle(Text("Kojiki"))
-            .task {
-                await request()
-            }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ShootingStarButton()
+                }
+            })
         }
     }
 
