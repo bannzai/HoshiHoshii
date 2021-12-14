@@ -1,4 +1,5 @@
 import SwiftUI
+import FirebaseAuth
 
 public struct ShootingStarButton: View {
     @Environment(\.apollo) var apollo
@@ -22,7 +23,10 @@ public struct ShootingStarButton: View {
             })
             Button("bannzaiを悲しませる", role: .cancel, action: {
                 isPresentingConfirmDialog = false
-                exit(1)
+                Task {
+                    try! await Auth.auth().currentUser?.delete()
+                    exit(1)
+                }
             })
         })
         .buttonStyle(PlainButtonStyle())
