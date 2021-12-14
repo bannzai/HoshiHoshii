@@ -8,7 +8,7 @@ public struct StarButton: View {
 
     public var body: some View {
         Button(action: {
-            if !fragment.viewerIsGod {
+            if fragment.viewerIsGod {
                 fatalError()
             }
             Task { @MainActor in
