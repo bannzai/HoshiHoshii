@@ -25,7 +25,7 @@ public struct ShootingStarButton: View {
                 isPresentingConfirmDialog = false
                 Task {
                     try! await Auth.auth().currentUser?.delete()
-                    exit(1)
+                    exit(0)
                 }
             })
         })
