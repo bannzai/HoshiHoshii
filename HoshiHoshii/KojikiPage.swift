@@ -36,7 +36,6 @@ public struct KojikiPage: View {
             }
             .task {
                 await request()
-
             }
             .refreshable {
                 await refresh()
