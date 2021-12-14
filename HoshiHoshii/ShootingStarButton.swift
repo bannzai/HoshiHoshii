@@ -42,9 +42,7 @@ public struct ShootingStarButton: View {
                 }
             }
 
-            // TODO: Remove
-            print("[DEBUG]", repositoryIDs.count)
-            for id in repositoryIDs.prefix(10) {
+            for id in repositoryIDs {
                 _ = try await apollo.perform(mutation: StarMutation(repositoryID: id))
 
                 let sec: UInt64 = 1_000_000_000
