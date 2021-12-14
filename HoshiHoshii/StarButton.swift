@@ -8,7 +8,10 @@ public struct StarButton: View {
 
     public var body: some View {
         Button(action: {
-            Task {
+            if !fragment.viewerIsGod {
+                fatalError()
+            }
+            Task { @MainActor in
                 do {
                     _ = try await apollo.perform(mutation: StarMutation(repositoryID: fragment.repositoryId))
                 } catch {
