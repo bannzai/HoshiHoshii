@@ -18,14 +18,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 // TODO: Open Settings
                 return
             case .notDetermined:
-                print("[DEBUG] begin register push notification")
                 do {
                     _ = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound])
                 } catch {
                     fatalError()
                 }
                 application.registerForRemoteNotifications()
-                print("[DEBUG] end register push notification")
             @unknown default:
                 fatalError()
             }
